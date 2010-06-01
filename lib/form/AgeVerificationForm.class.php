@@ -35,15 +35,15 @@ class AgeVerificationForm extends BaseForm
         ));
         
         $this->setValidator('country_code', new sfValidatorI18nChoiceCountry(array('required' => true, 'countries' => $this->getCountryCodes())));
-        $this->setDefault('country_code', 'GB');
+        $this->setDefault('country_code', isset($_SERVER['GEOIP_COUNTRY_CODE ']) ? $_SERVER['GEOIP_COUNTRY_CODE '] : 'GB');
         
         // check user is old enough. Could've used the min_date on the sfValidatorDate validator,
         // but couldn't figure out how to create an accurate timestamp.
         $this->mergePostValidator(new sfValidatorCallback(array('callback' => array($this, 'checkAge'))));
         
         $this->getWidgetSchema()->setLabels(array(
-            'country_code'  => 'Country:',
-            'date_of_birth' => 'Date of Birth:',
+            'country_code'  => 'Country',
+            'date_of_birth' => 'Date of Birth',
         ));
         
         $this->getWidgetSchema()->setNameFormat('age[%s]');
