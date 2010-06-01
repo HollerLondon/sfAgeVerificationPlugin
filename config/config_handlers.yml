@@ -1,0 +1,5 @@
+config/agents.yml:
+    class:    sfSimpleYamlConfigHandler
+
+config/countries.yml:
+    class:    sfSimpleYamlConfigHandler

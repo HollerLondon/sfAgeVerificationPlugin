@@ -1,0 +1,8 @@
+sf_age_verify:
+  url:   /age-verify
+  param: { module: sfAgeVerification, action: verify }
+
+sf_age_unverify:
+  url:   /age-unverify
+  param: { module: sfAgeVerification, action: unverify }
+    

@@ -1,0 +1,5 @@
+all:
+    sf_age_verification:
+        ignore:              # routes to bypass verification on
+            - sf_age_verify
+            - sf_age_denied

@@ -1,0 +1,4 @@
+countries:
+    GB:                        # iso country code
+       name: 'United Kingdom'  # country name. not required for select box, makes this file easier to read though.
+       age:  18                # required age or false for deny access
