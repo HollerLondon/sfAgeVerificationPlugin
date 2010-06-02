@@ -38,6 +38,14 @@ class BasesfAgeVerificationActions extends sfActions
         $this->setVar('form', $form);
         return sfView::SUCCESS;
     }    
+
+    /**
+     *
+     */
+    public function executeDenied(sfWebRequest $request)
+    {
+    	return sfView::SUCCESS;
+    }
     
     /**
      * 
