@@ -12,7 +12,7 @@ class sfAgeVerificationFilter extends sfFilter
             {
                 // if user has not verified their age, send them to 
                 // age verification before allowing them past.
-                if(!$this->getContext()->getUser()->isVerified() && !$this->ignoreCurrentRoute())
+                if($this->requiresVerification())
                 {
                     // set the referer once and once only (so invalid form page refreshes
                     // do not interfere).
@@ -23,6 +23,34 @@ class sfAgeVerificationFilter extends sfFilter
         }
         
         $filterChain->execute();
+    }
+    
+    /**
+     * Check whether or not we need to ask the user to verify their age and location.
+     * 
+     * @return boolean
+     */
+    protected function requiresVerification()
+    {
+        return !$this->getContext()->getUser()->isVerified() && !$this->ignoreCurrentRoute() && !$this->hasVerifiedCookie();
+    }
+    
+    /**
+     * If user has verification cookie then ensure they are verified and we have
+     * their country in the session.
+     * 
+     * @return boolean
+     */
+    protected function hasVerifiedCookie()
+    {
+        $remember_cookie = sfConfig::get('app_sf_age_verification_remember_cookie_name', 'sfAgeVerifyRemember');
+        if($country_code = $this->getContext()->getRequest()->getCookie($remember_cookie))
+        {
+            $this->getContext()->getUser()->verify(false, $country_code);
+            return true;
+        }
+        
+        return false;
     }
     
     /**

@@ -11,6 +11,13 @@ class AgeVerificationForm extends BaseForm
      */
     public function setup()
     {
+        // output  remember me checkbox if option set
+        if($this->getOption('remember_me'))
+        {
+            $this->setWidget('remember_me', new sfWidgetFormInputCheckbox());
+            $this->setValidator('remember_me', new sfValidatorBoolean(array('required' => false)));
+        }
+        
         $this->setWidget('country_code', new sfWidgetFormI18nChoiceCountry(array(
           'culture'   => $this->getOption('culture'),
           'countries' => $this->getCountryCodes()),

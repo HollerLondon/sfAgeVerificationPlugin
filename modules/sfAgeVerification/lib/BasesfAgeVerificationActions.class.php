@@ -8,7 +8,8 @@ class BasesfAgeVerificationActions extends sfActions
     public function executeVerify(sfWebRequest $request)
     {
         $form = new AgeVerificationForm(null, array(
-            'culture' => $this->getUser()->getCulture(),
+            'culture'     => $this->getUser()->getCulture(),
+            'remember_me' => sfConfig::get('app_sf_age_verification_remember_me', true)
         ));
         
         if($request->isMethod('post'))
@@ -19,8 +20,7 @@ class BasesfAgeVerificationActions extends sfActions
             
             if($form->isValid())
             {
-                $this->getUser()->verify();
-                $this->getUser()->setAttribute('country_code', $data['country_code']);
+                $this->getUser()->verify($form->getValue('remember_me'), $data['country_code']);
                 $this->redirect($this->getUser()->getReferer('@homepage'));
             }
             else
