@@ -42,7 +42,7 @@ class AgeVerificationForm extends BaseForm
         ));
         
         $this->setValidator('country_code', new sfValidatorI18nChoiceCountry(array('required' => true, 'countries' => $this->getCountryCodes())));
-        $this->setDefault('country_code', isset($_SERVER['GEOIP_COUNTRY_CODE']) ? $_SERVER['GEOIP_COUNTRY_CODE'] : 'CH');
+        $this->setDefault('country_code', isset($_SERVER['GEOIP_COUNTRY_CODE']) ? $_SERVER['GEOIP_COUNTRY_CODE'] : 'GB');
         
         // check user is old enough. Could've used the min_date on the sfValidatorDate validator,
         // but couldn't figure out how to create an accurate timestamp.

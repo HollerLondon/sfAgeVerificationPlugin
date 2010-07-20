@@ -21,7 +21,7 @@ class BasesfAgeVerificationActions extends sfActions
             if($form->isValid())
             {
                 $this->getUser()->verify($form->getValue('remember_me'), $data['country_code']);
-                $this->redirect($this->getUser()->getReferer('@homepage'));
+                $this->redirect('@homepage');
             }
             else
             {
