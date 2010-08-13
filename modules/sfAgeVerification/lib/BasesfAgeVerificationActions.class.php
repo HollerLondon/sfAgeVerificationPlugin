@@ -7,6 +7,11 @@ class BasesfAgeVerificationActions extends sfActions
      */
     public function executeVerify(sfWebRequest $request)
     {
+        if($this->getUser()->isVerified())
+        {
+            $this->redirect('@homepage');
+        }
+        
         $form = new AgeVerificationForm(null, array(
             'culture'     => $this->getUser()->getCulture(),
             'remember_me' => sfConfig::get('app_sf_age_verification_remember_me', true)
