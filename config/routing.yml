@@ -6,3 +6,6 @@ sf_age_unverify:
   url:   /age-unverify
   param: { module: sfAgeVerification, action: unverify }
     
+sf_age_denied:
+  url:   /age-verify/:country_code/denied
+  param: { module: sfAgeVerification, action: denied }
