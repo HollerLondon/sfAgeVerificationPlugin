@@ -423,8 +423,8 @@ countries:
   SM:
     name:  'San Marino'
     age:   18
-  # ST is in Africa/Middle-east [according to spreadhseet)
-  # so copy these brands for other africa countries
+  # ST is in Africa/Middle-east [according to spreadsheet)
+  # so copy these brands for other African countries
   ST:
     name:  'São Tomé and Príncipe'
     age:   18
@@ -458,7 +458,6 @@ countries:
   ZA:
     name:  'South Africa'
     age:   18
-    events:   http://www.olmeca.co.za    
   KR:
     name:  'South Korea'
     age:   19
@@ -556,4 +555,3 @@ countries:
   ZW:
     name:  Zimbabwe
     age:   18
-
