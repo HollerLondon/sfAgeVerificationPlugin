@@ -135,4 +135,3 @@ class AgeVerificationForm extends BaseForm
         return $config[$iso_code]['age'];
     }
 }
-?>
