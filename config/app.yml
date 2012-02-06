@@ -1,8 +1,8 @@
 all:
-    sf_age_verification:
-        remember_me:          true
-        remember_cookie_name: olmeca-remember
-        remember_period:      1296000           # two weeks
-        ignore:                                 # routes to bypass verification on
-            - sf_age_verify
-            - sf_age_denied
+  sf_age_verification:
+    remember_me:          true
+    remember_cookie_name: over18-remember
+    remember_period:      1296000           # two weeks
+    ignore:                                 # routes to bypass verification on
+      - sf_age_verify
+      - sf_age_denied
