@@ -1,956 +1,559 @@
-# COUNTRY_ISO:
-#   name: COUNTRY_NAME
-#   age:  REQUIRED AGE FOR ENTRY           false for no entry
-#   brands:                          List of available brands
-#       altos:  [altos, reposado]          List of available products (must NOT be empty, i.e. [])
-#       olmeca: [reposado]               List of available products (must NOT be empty, i.e. [])
-# NOTE - in the above exmaple, the tezon brand is unavailable and is therefore left out 
-
-#   events:   http://www.example.com       Events in your area link (http:// needed) optional
-#   facebook: http://www.facebook.com/foobar (http:// needed) optional
-#   twitter:  http://twitter.com/foobar      (http:// needed) optional
-#   redirect: http://www.example.com       Optional access denied page, redirect to this site if specified (http:// needed)
+# Format:
+# ISO-3166 Code:
+#   name:     COUNTRY_NAME
+#   age:      REQUIRED AGE FOR ENTRY # false for no entry
+#   redirect: http://www.example.com # Optional access denied page, redirect to this site if specified (http:// needed)
+#
+# Real world example:
+# GB:
+#   name:  'United Kingdom'
+#   age:   18
+#   redirect: http://www.drinkaware.co.uk/
 
 countries:
   AF:
-    name: Afghanistan
-    age:  false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
+    name:  Afghanistan
+    age:   false
   AL:
-    name: Albania
-    age: 18
+    name:  Albania
+    age:   18
   DZ:
-    name: Algeria
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Algeria
+    age:   18
   AD:
-    name: Andorra
-    age: 18
+    name:  Andorra
+    age:   18
   AO:
-    name: Angola
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Angola
+    age:   18
   AG:
-    name: 'Antigua and Barbuda'
-    age: 18
+    name:  'Antigua and Barbuda'
+    age:   18
   AR:
-    name: Argentina
-    age: 18
+    name:  Argentina
+    age:   18
   AM:
-    name: Armenia
-    age: 18
-    brands:
-      olmeca: [blanco, gold]
-      tezon:  [blanco, anejo]
+    name:  Armenia
+    age:   18
   AU:
-    name: Australia
-    age: 18
-    brands:
-      olmeca: [reposado]
+    name:  Australia
+    age:   18
   AT:
-    name: Austria
-    age: 18
-    brands:
-      olmeca: [blanco, gold, reposado]
-      altos:  [reposado]
-      tezon:  [reposado]
+    name:  Austria
+    age:   18
   AZ:
-    name: Azerbaijan
-    age: 18
+    name:  Azerbaijan
+    age:   18
   BS:
-    name: Bahamas
-    age:  18
+    name:  Bahamas
+    age:   18
   BH:
-    name: Bahrain
-    age:  21
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Bahrain
+    age:   21
   BD:
-    name: Bangladesh
-    age:  false
+    name:  Bangladesh
+    age:   false
   BB:
-    name: Barbados
-    age: 18
+    name:  Barbados
+    age:   18
   BY:
-    name: Belarus
-    age: 21
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [reposado]
-      tezon:  [anejo, blanco, reposado]
+    name:  Belarus
+    age:   21
   BE:
-    name: Belgium
-    age: 18
-    brands:
-      olmeca: [blanco]
+    name:  Belgium
+    age:   18
   BZ:
-    name: Belize
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Belize
+    age:   18
   BJ:
-    name: Benin
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Benin
+    age:   18
   BT:
-    name: Bhutan
-    age: 18
+    name:  Bhutan
+    age:   18
   BO:
-    name: Bolivia
-    age: 18
+    name:  Bolivia
+    age:   18
   BA:
-    name: 'Bosnia and Herzegovina'
-    age: 18
+    name:  'Bosnia and Herzegovina'
+    age:   18
   BW:
-    name: Botswana
-    age: 18
-    brands:
-      olmeca: [blanco, gold, anejo]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Botswana
+    age:   18
   BR:
-    name: Brazil
-    age: 18
-    brands:
-      tezon:  [reposado]
+    name:  Brazil
+    age:   18
   BN:
-    name: Brunei
-    age: false
+    name:  Brunei
+    age:   false
   BG:
-    name: Bulgaria
-    age: 18
+    name:  Bulgaria
+    age:   18
   BF:
-    name: 'Burkina Faso'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'Burkina Faso'
+    age:   18
   KH:
-    name: Cambodia
-    age: 18
+    name:  Cambodia
+    age:   18
   CM:
-    name: Cameroon
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Cameroon
+    age:   18
   CA:
-    name: Canada
-    age: 19
-    brands:
-      olmeca: [anejo, blanco, gold]
-      tezon:  [anejo, blanco, reposado]
+    name:  Canada
+    age:   19
   CV:
-    name: 'Cape Verde'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'Cape Verde'
+    age:   18
   CF:
-    name: 'Central African Republic'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'Central African Republic'
+    age:   18
   TD:
-    name: Chad
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]  
+    name:  Chad
+    age:   18
   CL:
-    name: Chile
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
-      tezon:  [anejo]  
+    name:  Chile
+    age:   18
   CN:
-    name: China
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  China
+    age:   18
   CO:
-    name: Colombia
-    age: 18
+    name:  Colombia
+    age:   18
   CG:
-    name: 'Congo'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
-
+    name:  'Congo'
+    age:   18
   CR:
-    name: 'Costa Rica'
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  'Costa Rica'
+    age:   18
   CI:
-    name: 'Ivory Coast'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'Ivory Coast'
+    age:   18
   HR:
-    name: Croatia
-    age: 18
+    name:  Croatia
+    age:   18
   CU:
-    name: Cuba
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  Cuba
+    age:   18
   CY:
-    name: Cyprus
-    age: 18
+    name:  Cyprus
+    age:   18
   CZ:
-    name: 'Czech Republic'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
+    name:  'Czech Republic'
+    age:   18
   DK:
-    name: Denmark
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  Denmark
+    age:   18
   DJ:
-    name: Djibouti
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Djibouti
+    age:   18
   DM:
-    name: Dominica
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Dominica
+    age:   18
   DO:
-    name: 'Dominican Republic'
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  'Dominican Republic'
+    age:   18
   EC:
-    name: Ecuador
-    age: 18
+    name:  Ecuador
+    age:   18
   EG:
-    name: Egypt
-    age:  21
-    brands:
-      olmeca: [blanco, gold, anejo]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
-    brands:
-      olmeca: [blanco, gold, anejo]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
-
+    name:  Egypt
+    age:   21
   SV:
-    name: 'El Salvador'
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  'El Salvador'
+    age:   18
   GQ:
-    name: 'Equatorial Guinea'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'Equatorial Guinea'
+    age:   18
   EE:
-    name: Estonia
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
+    name:  Estonia
+    age:   18
   FJ:
-    name: Fiji
-    age: 18
+    name:  Fiji
+    age:   18
   FI:
-    name: Finland
-    age: 20
+    name:  Finland
+    age:   20
   FR:
-    name: France
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  France
+    age:   18
   PF:
-    name: 'French Polynesia'
-    age: 18
+    name:  'French Polynesia'
+    age:   18
   GA:
-    name: Gabon
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
-
+    name:  Gabon
+    age:   18
   GM:
-    name: Gambia
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Gambia
+    age:   18
   GE:
-    name: Georgia
-    age: 18
+    name:  Georgia
+    age:   18
   DE:
-    name: Germany
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Germany
+    age:   18
   GH:
-    name: Ghana
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Ghana
+    age:   18
   GR:
-    name: Greece
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
-      altos:  [reposado]
+    name:  Greece
+    age:   18
   GD:
-    name: Grenada
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Grenada
+    age:   18
   GT:
-    name: Guatemala
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Guatemala
+    age:   18
   GN:
-    name: Guinea
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Guinea
+    age:   18
   GW:
-    name: Guinea-Bissau
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Guinea-Bissau
+    age:   18
   GY:
-    name: Guyana
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Guyana
+    age:   18
   HT:
-    name: Haiti
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Haiti
+    age:   18
   HN:
-    name: Honduras
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Honduras
+    age:   18
   HK:
-    name: 'Hong Kong'
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  'Hong Kong'
+    age:   18
   HU:
-    name: Hungary
-    age: 18
-    brands:
-      olmeca: [blanco, gold]
+    name:  Hungary
+    age:   18
   IN:
-    name: India
-    age: 25
+    name:  India
+    age:   25
   ID:
-    name: Indonesia
-    age: 21
+    name:  Indonesia
+    age:   21
   IR:
-    name: Iran
-    age: false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Iran
+    age:   false
   IQ:
-    name: Iraq
-    age: false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
+    name:  Iraq
+    age:   false
   IE:
-    name: Ireland
-    age: 18
-    brands:
-      olmeca: [reposado]
+    name:  Ireland
+    age:   18
   IL:
-    name: Israel
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Israel
+    age:   18
   IT:
-    name: Italy
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  Italy
+    age:   18
   JM:
-    name: Jamaica
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Jamaica
+    age:   18
   JP:
-    name: Japan
-    age: 20
-    brands: 
-      olmeca: [blanco, reposado]
+    name:  Japan
+    age:   20
   JO:
-    name: Jordan
-    age: false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Jordan
+    age:   false
   KZ:
-    name: Kazakhstan
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      tezon:  [anejo, blanco, reposado]
+    name:  Kazakhstan
+    age:   18
   KE:
-    name: Kenya
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Kenya
+    age:   18
   KW:
-    name: Kuwait
-    age: 21
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Kuwait
+    age:   21
   KG:
-    name: Kyrgyzstan
-    age: 18
+    name:  Kyrgyzstan
+    age:   18
   LA:
-    name: Laos
-    age: 18
+    name:  Laos
+    age:   18
   LV:
-    name: Latvia
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
+    name:  Latvia
+    age:   18
   LB:
-    name: Lebanon
-    age: 18
-    brands: 
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Lebanon
+    age:   18
   LS:
-    name: Lesotho
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Lesotho
+    age:   18
   LR:
-    name: Liberia
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Liberia
+    age:   18
   LY:
-    name: Libya
-    age: false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Libya
+    age:   false
   LI:
-    name: Liechtenstein
-    age: 18
+    name:  Liechtenstein
+    age:   18
   LT:
-    name: Lithuania
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
+    name:  Lithuania
+    age:   18
   LU:
-    name: Luxembourg
-    age: 18
+    name:  Luxembourg
+    age:   18
   MK:
-    name: Macedonia
-    age: 18
+    name:  Macedonia
+    age:   18
   MG:
-    name: Madagascar
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Madagascar
+    age:   18
   MW:
-    name: Malawi
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Malawi
+    age:   18
   MY:
-    name: Malaysia
-    age: 18
-    brands:
-      olmeca: [reposado]
+    name:  Malaysia
+    age:   18
   MV:
-    name: Maldives
-    age: 18
+    name:  Maldives
+    age:   18
   ML:
-    name: Mali
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Mali
+    age:   18
   MT:
-    name: Malta
-    age: 18
+    name:  Malta
+    age:   18
   MR:
-    name: Mauritania
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Mauritania
+    age:   18
   MU:
-    name: Mauritius
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Mauritius
+    age:   18
   MX:
-    name: Mexico
-    age: 18
+    name:  Mexico
+    age:   18
   FM:
-    name: Micronesia
-    age: 18
+    name:  Micronesia
+    age:   18
   MD:
-    name: Moldova
-    age: 18
+    name:  Moldova
+    age:   18
   MC:
-    name: Monaco
-    age: 18
+    name:  Monaco
+    age:   18
   MN:
-    name: Mongolia
-    age: 21
+    name:  Mongolia
+    age:   21
   MA:
-    name: Morocco
-    age: 18
-    brands: 
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Morocco
+    age:   18
   MZ:
-    name: Mozambique
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Mozambique
+    age:   18
   NA:
-    name: Namibia
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
+    name:  Namibia
+    age:   18
   NP:
-    name: Nepal
-    age: 18
+    name:  Nepal
+    age:   18
   NL:
-    name: Netherlands
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
-      tezon:  [reposado]
+    name:  Netherlands
+    age:   18
   NZ:
-    name: 'New Zealand'
-    age: 18
+    name:  'New Zealand'
+    age:   18
   NI:
-    name: Nicaragua
-    age: 19
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Nicaragua
+    age:   19
   NE:
-    name: Niger
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Niger
+    age:   18
   NG:
-    name: Nigeria
-    age: 21
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Nigeria
+    age:   21
   KP:
-    name: 'North Korea'
-    age: 18
+    name:  'North Korea'
+    age:   18
   NO:
-    name: Norway
-    age: 20
-    brands:
-      olmeca: [blanco, reposado]
+    name:  Norway
+    age:   20
   OM:
-    name: Oman
-    age: 21
-    brands: 
-      olmeca: [blanco, gold, anejo]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Oman
+    age:   21
   PK:
-    name: Pakistan
-    age: false
+    name:  Pakistan
+    age:   false
   PA:
-    name: Panama
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  Panama
+    age:   18
   PG:
-    name: 'Papua New Guinea'
-    age: 18
+    name:  'Papua New Guinea'
+    age:   18
   PY:
-    name: Paraguay
-    age: 20
+    name:  Paraguay
+    age:   20
   PE:
-    name: Peru
-    age: 18
+    name:  Peru
+    age:   18
   PH:
-    name: Philippines
-    age: 18
+    name:  Philippines
+    age:   18
   PL:
-    name: Poland
-    age: 18
-    brands:
-      olmeca: [blanco, gold]
+    name:  Poland
+    age:   18
   PT:
-    name: Portugal
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  Portugal
+    age:   18
   QA:
-    name: Qatar
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
+    name:  Qatar
+    age:   18
 
   RO:
-    name: Romania
-    age: 18
-    brands:
-      olmeca: [blanco, gold]
+    name:  Romania
+    age:   18
   RU:
-    name:     Russia
-    age:      18
-    brands: 
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
-    events:     http://www.olmeca.ru    
-    facebook:   'http://www.facebook.com/?ref=home#!/pages/Olmeca-Tequila-Russia/36196670029?ref=ts'
-    twitter:    http://twitter.com/olmeca_tequila
+    name:  Russia
+    age:   18
   RW:
-    name: Rwanda
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Rwanda
+    age:   18
   KN:
-    name:       'Saint Kitts and Nevis'
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  'Saint Kitts and Nevis'
+    age:   18
   LC:
-    name: 'Saint Lucia'
-    age: 18
-    brands:
-      olmeca: [blanco, reposado, anejo]
+    name:  'Saint Lucia'
+    age:   18
   VC:
-    name:       'Saint Vincent and the Grenadines'
-    age:      18
-    brands:
-      olmeca: [anejo, blanco, gold]
+    name:  'Saint Vincent and the Grenadines'
+    age:   18
   WS:
-    name:   Samoa
-    age:    21
+    name:  Samoa
+    age:   21
   SM:
-    name: 'San Marino'
-    age: 18
+    name:  'San Marino'
+    age:   18
   # ST is in Africa/Middle-east [according to spreadhseet)
   # so copy these brands for other africa countries
   ST:
-    name: 'São Tomé and Príncipe'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'São Tomé and Príncipe'
+    age:   18
   SA:
-    name: 'Saudi Arabia'
-    age: false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'Saudi Arabia'
+    age:   false
   SN:
-    name: Senegal
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Senegal
+    age:   18
   CS:
-    name: 'Serbia and Montenegro'
-    age:  18
+    name:  'Serbia and Montenegro'
+    age:   18
   SC:
-    name: Seychelles
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Seychelles
+    age:   18
   SL:
-    name: 'Sierra Leone'
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'Sierra Leone'
+    age:   18
   SG:
-    name: Singapore
-    age: 18
-    brands:
-      olmeca: [reposado]
+    name:  Singapore
+    age:   18
   SK:
-    name: Slovakia
-    age: 18
+    name:  Slovakia
+    age:   18
   SI:
-    name: Slovenia
-    age: 18
-    brands:
-      olmeca: [blanco, gold]
-      altos:  [reposado]
-      tezon:  [anejo, reposado]
+    name:  Slovenia
+    age:   18
   SO:
-    name: Somalia
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Somalia
+    age:   18
   ZA:
-    name:     'South Africa'
-    age:      18
+    name:  'South Africa'
+    age:   18
     events:   http://www.olmeca.co.za    
-    brands:
-      olmeca: [anejo, blanco, reposado]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
   KR:
-    name: 'South Korea'
-    age: 19
+    name:  'South Korea'
+    age:   19
   ES:
-    name: Spain
-    age: 18
+    name:  Spain
+    age:   18
   LK:
-    name: 'Sri Lanka'
-    age: 18
+    name:  'Sri Lanka'
+    age:   18
   SD:
-    name: Sudan
-    age: false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Sudan
+    age:   false
   SR:
-    name: Suriname
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Suriname
+    age:   18
   SZ:
-    name: Swaziland
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Swaziland
+    age:   18
   SE:
-    name: Sweden
-    age: 20
-    brands:
-      olmeca: [anejo, blanco, reposado]
+    name:  Sweden
+    age:   20
   CH:
-    name: Switzerland
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  Switzerland
+    age:   18
   SY:
-    name: Syria
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Syria
+    age:   18
   TZ:
-    name: Tanzania
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Tanzania
+    age:   18
   TW:
-    name: Taiwan
-    age: 18
+    name:  Taiwan
+    age:   18
   TH:
-    name: Thailand
-    age: 20
-    brands:
-      olmeca: [gold]
+    name:  Thailand
+    age:   20
   TG:
-    name: Togo
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Togo
+    age:   18
   TO:
-    name: Tonga
-    age: 18
+    name:  Tonga
+    age:   18
   TT:
-    name: 'Trinidad and Tobago'
-    age: 18
+    name:  'Trinidad and Tobago'
+    age:   18
   TN:
-    name: Tunisia
-    age: false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Tunisia
+    age:   false
   TR:
-    name:     Turkey
-    age:      24
-    events:   http://www.olmeca.com.tr
-    facebook: http://www.facebook.com/pages/Olmeca-Tequila/28307248838
-    brands:
-      olmeca: [blanco, gold]
-      altos:  [reposado]
-      tezon:  [blanco, reposado] 
+    name:  Turkey
+    age:   24
   TM:
-    name: Turkmenistan
-    age: 18
+    name:  Turkmenistan
+    age:   18
   TV:
-    name: Tuvalu
-    age: 18
+    name:  Tuvalu
+    age:   18
   UG:
-    name: Uganda
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Uganda
+    age:   18
   UA:
-    name: Ukraine
-    age: 18
-    brands:
-      olmeca: [blanco, gold]
-      altos:  [reposado]      
+    name:  Ukraine
+    age:   18
   AE:
-    name:     'United Arab Emirates'
-    age:      21
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  'United Arab Emirates'
+    age:   21
   GB:
-    name:     'United Kingdom'
-    age:      18
+    name:  'United Kingdom'
+    age:   18
     redirect: http://www.drinkaware.co.uk/
-    brands:
-      olmeca: [blanco, reposado]
-      altos:  [blanco, reposado]
   US:
-    name:     'United States'
-    age:      21
+    name:  'United States'
+    age:   21
   UY:
-    name: Uruguay
-    age: 18
-    brands:
-      olmeca: [blanco, reposado]
+    name:  Uruguay
+    age:   18
   UZ:
-    name: Uzbekistan
-    age: false
+    name:  Uzbekistan
+    age:   false
   VU:
-    name: Vanuatu
-    age: 18
+    name:  Vanuatu
+    age:   18
   VE:
-    name: Venezuela
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, reposado]
+    name:  Venezuela
+    age:   18
   VN:
-    name: Vietnam
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
+    name:  Vietnam
+    age:   18
   YE:
-    name: Yemen
-    age: false
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Yemen
+    age:   false
   ZM:
-    name: Zambia
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Zambia
+    age:   18
   ZW:
-    name: Zimbabwe
-    age: 18
-    brands:
-      olmeca: [anejo, blanco, gold]
-      altos:  [blanco, reposado]
-      tezon:  [blanco, reposado]
+    name:  Zimbabwe
+    age:   18
+
