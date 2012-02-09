@@ -1,4 +1,4 @@
-<h2><?php echo __('Please enter your age') ?></h2>
+<h2><?php echo __('Please confirm your age') ?></h2>
 
 <?php echo $form->renderFormTag(url_for('@sf_age_verify')) ?>
     <?php echo $form ?>

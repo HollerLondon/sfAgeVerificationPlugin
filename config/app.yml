@@ -1,5 +1,6 @@
 all:
   sf_age_verification:
+    # allowed_countries:          [ GB ]  # specify smaller group of countries
     remember_me:          true
     remember_cookie_name: age_verified
     remember_period:      1296000 # two weeks
