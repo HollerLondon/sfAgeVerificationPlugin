@@ -49,6 +49,11 @@ class BasesfAgeVerificationActions extends sfActions
    */
   public function executeDenied(sfWebRequest $request)
   {
+    $country_code = $request->getParameter('country_code');
+    $country_config = include(sfContext::getInstance()->getConfigCache()->checkConfig('config/countries.yml'));
+    
+    $this->setVar('required_age', $country_config['countries'][$country_code]['age']);
+    
     return sfView::SUCCESS;
   }
 
