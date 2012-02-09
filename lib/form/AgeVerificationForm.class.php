@@ -25,14 +25,15 @@ class AgeVerificationForm extends BaseForm
         'culture'   => $this->getOption('culture'),
         'countries' => $countries)
       ));
+      $this->setDefault('country_code', isset($_SERVER['GEOIP_COUNTRY_CODE']) ? $_SERVER['GEOIP_COUNTRY_CODE'] : 'GB');
     }
     else
     {
       $this->setWidget('country_code', new sfWidgetFormInputHidden());
+      $this->setDefault('country_code', $countries[0]);
     }
     
     $this->setValidator('country_code', new sfValidatorI18nChoiceCountry(array('required' => true, 'countries' => $this->getCountryCodes())));
-    $this->setDefault('country_code', isset($_SERVER['GEOIP_COUNTRY_CODE']) ? $_SERVER['GEOIP_COUNTRY_CODE'] : 'GB');
     
     $this->setWidget('date_of_birth', new sfWidgetFormInputDate(array('format' => '%day%%month%%year%')));
     $this->setValidator('date_of_birth', new sfValidatorDate(
